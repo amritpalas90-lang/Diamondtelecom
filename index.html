@@ -1,10 +1,173 @@
-<html> 
-<head> <title> Dismond Cafe </title></head>
-<body> 
-<h2> Diamond Cafe </h2>
-<
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Shop - Accessories & Old Mobiles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5') no-repeat center center/cover;
+      color: white;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px black;
+    }
+    .section {
+      padding: 20px;
+      text-align: center;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    .updates {
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📱 My Mobile Shop</h1>
+    <p>Accessories & Old Mobile Selling</p>
+  </header>
 
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#mobiles">Old Mobiles</a>
+    <a href="#updates">Daily Updates</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <section class="hero" id="home">
+    Welcome to My Mobile Shop
+  </section>
 
+  <section class="section" id="accessories">
+    <h2>Mobile Accessories</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1585386959984-a41552261c91" alt="Charger">
+        <h3>Fast Charger</h3>
+        <p>₹500 Only</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1588422333075-21a5b0daec2c" alt="Earphones">
+        <h3>Bluetooth Earphones</h3>
+        <p>₹1,200 Only</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1620136605592-3b62a68e8a97" alt="Covers">
+        <h3>Stylish Covers</h3>
+        <p>₹300 Only</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="mobiles">
+    <h2>Old Mobiles for Sale</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="iPhone">
+        <h3>iPhone X</h3>
+        <p>₹15,000 Only</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796" alt="Samsung">
+        <h3>Samsung Galaxy S9</h3>
+        <p>₹12,000 Only</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="updates">
+    <h2>📢 Daily Updates</h2>
+    <div class="updates" id="daily-updates">
+      <ul>
+        <li>🔥 Today Offer: 20% off on Bluetooth Earphones</li>
+        <li>⚡ New stock of iPhone 11 available</li>
+        <li>🎧 Free tempered glass with every mobile cover</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>📍 Location: Main Market, Your City</p>
+    <p>📞 Contact: +91 9876543210</p>
+    <p>© 2025 My Mobile Shop</p>
+  </footer>
+
+  <script>
+    // Example: Update daily offers dynamically
+    const updates = [
+      "🔥 Today Offer: 20% off on Bluetooth Earphones",
+      "⚡ New stock of iPhone 11 available",
+      "🎧 Free tempered glass with every mobile cover",
+      "📱 Exchange Offer on Old Mobiles!"
+    ];
+
+    let index = 0;
+    function changeUpdate() {
+      document.getElementById("daily-updates").innerHTML = "<ul><li>" + updates[index] + "</li></ul>";
+      index = (index + 1) % updates.length;
+    }
+    setInterval(changeUpdate, 5000); // change every 5 sec
+  </script>
 </body>
 </html>
